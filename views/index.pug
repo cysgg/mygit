@@ -1,0 +1,32 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title = 图书管理系统
+        link(href="/www/style.css",type='text/css',rel='stylesheet')
+            
+body
+    div.title 图书管理系统 
+        a(href="/toAddBook") 添加图书
+    div.content
+        table(cellpadding="0" cellspacing="0")
+            thead
+                tr
+                    th  编号
+                    th  名称
+                    th  作者
+                    th  分类
+                    th  描述
+                    th  操作
+            tbody
+                each value in list
+                    tr
+                        td  #{value.id}
+                        td  #{value.name}
+                        td  #{value.author}
+                        td  #{value.category}
+                        td  #{value.desc}
+                        td
+                            a(href="/toEditBook?id=" + value.id ) 修改 
+                            |
+                            a(href="#") 删除

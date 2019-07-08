@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        meta(charset="UTF-8")
+        title = 修改图书
+        link(href="/www/style.css",type='text/css',rel='stylesheet')
+            
+body
+    div 修改图书
+    form(action="/editBook",method="post")
+        input(type="hidden",name="id",value=id)
+        | 名称： 
+        input(type="text",name="name",value=name)
+        <br>
+        | 作者： 
+        input(type="text",name="author",value=author)
+        <br>
+        | 类型： 
+        input(type="text",name="category",value=category)
+        <br>
+        | 描述： 
+        input(type="text",name="desc",value=desc)
+        <br>
+        input(type="submit", value="提交")
